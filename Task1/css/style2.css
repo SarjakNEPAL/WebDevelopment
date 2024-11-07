@@ -7,7 +7,7 @@
 body {
     position: relative;
     margin: 0;
-    background-image: url(../pics/appledark.jpg);
+    background-image: url(../pics/katekoapple.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -40,30 +40,16 @@ body {
 }
 
 #content {
-    text-align: center;
+    justify-content: center;
     position: relative; 
-    background: linear-gradient(rgba(204, 0, 0, 0.6), rgba(26, 1, 1, 0.8));
+    background: linear-gradient(rgba(135, 216, 148, 0.7), rgba(163, 5, 5, 0.7));
     background-attachment: fixed;
     min-height: 100vh; 
 }
 
 
 #topcontent {
-    padding-top: 20%;
-    justify-content: center;
-    image-rendering: inherit;
-    position: relative;
+    padding-top: 10%;
+    
 
 }
-
-#texts {
-    color: aliceblue;
-    position: relative;
-    margin:1rem;
-}
- #texts h1{
-    text-decoration:solid;
-    text-transform: capitalize;
-    padding: 1%;
-    font-size: 35px;
- }

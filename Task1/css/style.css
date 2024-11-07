@@ -1,0 +1,32 @@
+*{
+    font-family:sans-serif;
+    font-size: 30;
+    margin:0;
+}
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(rgb(92, 221, 103),green);
+}
+
+#navbar img{
+    width: 4rem;
+}
+
+#navbar ul{
+    display: flex;
+    list-style-type: none;
+    text-decoration:none;
+    padding-right: 10%;
+}
+
+#navbar ul li{
+    color:#ffff;
+    margin: 1rem;
+}
+
+#content{
+    justify-content: center;
+    text-align: center;
+}

@@ -1,0 +1,49 @@
+*{
+    font-size: 30;
+}
+
+body{
+    background-color: rgb(146, 220, 247);
+}
+
+#nav{
+    background-color: rgb(111, 105, 194);
+    border:solid black 0.5rem;
+    width:90%;
+    height:5rem;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;}
+
+#main{
+    background-color: rgb(119, 119, 173);
+    border:solid black 0.5rem;
+    width:90%;
+    position: relative;
+    height: 70vh;
+    margin: 2%;
+}
+
+#logo{
+    height: 2rem;
+    width:3rem;
+    margin:1rem;
+    background-color:rgb(201, 161, 223);
+    border: solid black 0.5rem;
+}
+#profile{
+    height: 2rem;
+    width:4rem;
+    margin:1rem;
+    background-color:rgb(179, 155, 218);
+    border: solid black 0.5rem;
+    justify-content: center;
+}
+#content{
+    height: 2rem;
+    width:30rem;
+    margin:1rem;
+    background-color:rgb(101, 218, 88);
+    border: solid black 0.5rem;
+    justify-content: center;
+}

@@ -37,7 +37,6 @@ body{
     margin:1rem;
     background-color:rgb(179, 155, 218);
     border: solid black 0.5rem;
-    justify-content: center;
 }
 #content{
     height: 2rem;
@@ -45,5 +44,4 @@ body{
     margin:1rem;
     background-color:rgb(101, 218, 88);
     border: solid black 0.5rem;
-    justify-content: center;
 }

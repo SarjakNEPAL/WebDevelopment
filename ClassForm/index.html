@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, JS, CSS" />
+    <meta name="description" content="This is the signup page frontend assigned by the sir"/>
+    <meta name="author" content="Sarjak Bhandari"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <script>
+        function passwordConfirm(){
+            const password=document.getElementById('password').value;
+            const Confirm=document.getElementById('cpassword').value;
+            if (password!=Confirm){
+                alert("Passwords Donot Match");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="signup">
+        <form action="" id="entry" onsubmit="return passwordConfirm">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required placeholder="Username" maxlength="10">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required placeholder="Password" minlength="8">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" id="cpassword" required placeholder="Confirm Password" minlength="8">
+            <p>Gender:</p>
+            <label><input type="radio" name="gender" id="gender" value="M" required >Male</label>
+            <label><input type="radio" name="gender" id="gender" value="F" required >Female</label>
+            <label><input type="radio" name="gender" id="gender" value="O" required >Other</label>
+            <label for="age">Current Age</label>
+            <input type="number" name="age" id="age" required min="18" max="100">
+            <label for="dob">Date Of Birth</label>
+            <input type="date" name="dob" id="dob" required >
+            <label for="phno">Phone Number</label>
+            <input type="number" name="phno" id="phno" required minlength="10" maxlength="10">
+            <label for="color">Favourite color</label>
+            <input type="color" name="color" id="color">
+            <label for="file"> Choose a picture</label>
+            <input type="file" name="file" id="file" accept="image/">
+            <input type="checkbox" name="agreement" id="agreement" required >
+            <label for="checkbox">I give concent to sell my datas</label>
+            <input type="submit" >Signup</input>
+        </form>
+    </div>
+</body>
+</html>

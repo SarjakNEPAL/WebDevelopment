@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script>
+        function putDatas(){
+            const username=document.getElementById('Username').value;
+        const email=document.getElementById('email').value;
+        const password=document.getElementById('password').value;
+        var tags="<tr><td>"+username+"</td><td>"+email+"</td><td>"+password+"</td><tr>";
+            document.getElementById('datas').innerHTML+=tags;
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="entry">
+        <form action="" onsubmit="putDatas">
+        <input type="text" name="Username" id="Username" placeholder="Username" reuired>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="password" name="password" id="password" placeholder="Password" required minlength="8">
+        <input type="submit" value="Enter">
+    </form>
+    </div>
+    <div id="table">
+        <table id="datas" border="2">
+            <thead>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Password</th>
+            </thead>
+            <tbody>
+                <div id="Datas"></div>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

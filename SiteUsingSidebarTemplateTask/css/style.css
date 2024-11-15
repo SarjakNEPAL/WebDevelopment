@@ -1,0 +1,76 @@
+*{
+    font-size: 24px;
+}
+body{
+    background-color:rgb(201, 197, 175);
+}
+#main,#sidebar,#nav,#footer{
+    margin:0.2rem;
+    border: solid black 0.05rem;
+    border-radius: 24px;
+}
+
+#nav{
+    background-color: rgb(16, 83, 240);
+    height: 4rem;
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main{
+    background-color: rgb(192, 221, 240);
+    height:65vh;
+    width:85%;
+}
+#sidebar{
+    background-color: rgb(161, 201, 212);
+    height: 65vh;
+    width:13%;
+ 
+}
+#footer{
+    height:15vh;
+    background-color: burlywood;
+    position: relative;
+
+}
+#content{
+    display: flex;
+}
+
+
+input,label{
+    margin:0.5rem;
+    justify-self: center;
+}
+form input{
+    border:solid blue 0.05rem;
+    border-radius: 14px;
+    padding: 0.5rem;
+}
+
+form{
+    border: solid black 0.05rem;
+    margin: 1rem;
+    border-radius: 14px;
+    width:fit-content;
+    background-color: rgb(222, 246, 245);
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav h1,img{
+    padding:1rem;
+}
+li input{
+    background-color: aliceblue;
+    color: black;
+    border-radius: 14px;
+    border:solid black 0.1rem;
+}

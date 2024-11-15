@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="nav">
+        <img src="" alt="LOGO">
+        <h1> A Website</h1>
+        
+    </div>
+    <div id="content">
+    <div id="sidebar">
+        <ul>
+            <li><input type="button" value="Home"></li>
+            <li><input type="button" value="About"></li>
+            <li><input type="button" value="Support"></li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="signup">
+            <form action="" id="entry" onsubmit="return passwordConfirm">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required placeholder="Username" maxlength="10"><br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required placeholder="Email"><br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required placeholder="Password" minlength="8"><br>
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" name="cpassword" id="cpassword" required placeholder="Confirm Password" minlength="8"><br>
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" id="gender" value="M" required >Male</label>
+                <label><input type="radio" name="gender" id="gender" value="F" required >Female</label>
+                <label><input type="radio" name="gender" id="gender" value="O" required >Other</label><br>
+                <input type="submit" >Signup</input><br>
+            </form>
+    
+        </div>
+    </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

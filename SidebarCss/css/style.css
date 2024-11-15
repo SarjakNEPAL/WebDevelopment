@@ -1,0 +1,33 @@
+*{
+    font-size: 24px;
+}
+#main,#sidebar,#nav,#footer{
+    margin:0.2rem;
+    border: solid black 0.2rem;
+}
+
+#nav{
+    background-color: beige;
+    height: 4rem;
+}
+#main{
+    background-color: bisque;
+    height:80vh;
+    width:85%;
+}
+#sidebar{
+    background-color: blanchedalmond;
+    height: 80vh;
+    width:13%;
+ 
+}
+#footer{
+    height:15vh;
+    background-color: burlywood;
+    position: relative;
+
+}
+#content{
+    display: flex;
+}
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: rgb(157, 234, 255);
+        }
+        table{
+            border:solid rgb(0, 255, 51) 0.1rem;
+            background-color: rgb(0, 0, 0);
+        }
+        td,th{
+            padding: 1rem;
+            background-color: rgb(255, 255, 255);
+        }
+        th{
+            font-size: 30px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    <table border="2" align="center">
+        <thead>
+            <th colspan="2">Heading 1</th>
+            <th>Heading 2</th>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Row1</td>
+            <td>Row1</td>
+            <td>Row1</td>
+            </tr>
+            <tr>
+            <td>Row2</td>
+            <td rowspan="2">Row2</td>
+            <td>Row2</td>
+            </tr>
+            <tr>
+            <td>Row3</td>
+            <td>Row3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

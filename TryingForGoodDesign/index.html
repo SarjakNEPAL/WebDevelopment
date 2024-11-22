@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Googlie</title>
+    <style>
+        *{
+            font-size: 24px;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(32, 33, 36);
+             
+        }
+        nav img{
+            height: 1.5rem;
+            border-radius: 100%;
+        }
+        nav a{
+            text-decoration: none;
+            color:azure;
+            margin:0.5rem;
+            font-size: 0.6rem;
+            font-weight:400;
+            align-self: center;
+        }
+        nav{
+            height: 3rem;
+            color: aliceblue;
+            width:100%;
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            flex-wrap: wrap;
+            object-fit: cover;
+            justify-content: right;
+            }
+        #Search{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+
+        }
+        main{
+            position: absolute;
+            transform: translate(-50% , -50%);
+            top: 50%;
+            left: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+                    }
+        #Search input{
+            width: 150%;
+            padding-left: 0.5rem;
+            border-radius: 24px;
+            margin: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="mail.google.com">Gmail</a>
+        <a href="images.google.com">Image</a>
+        <img src="blank-profile-picture-pfp.webp" alt="Profile">
+    </nav>
+    <main>
+        
+        <div id="Search">
+            <img src="./googlelogo.png" alt="logo">
+            <input type="search" name="search" id="search">
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>

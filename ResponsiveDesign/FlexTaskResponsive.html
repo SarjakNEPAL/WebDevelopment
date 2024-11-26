@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+        .boxes{
+            border:solid black 0.1rem;
+height: 5rem;
+/* margin: 0.5rem; */
+width: 5rem;
+            /* text-align: center;
+            align-items: center; */
+            /* flex-grow: 1; */
+            flex-shrink: 5;
+        }
+        #Container{
+            background-color: aqua;
+            width: 100%;
+            height: fit-content;
+            display: flex;  
+            /*1) flex directions */
+            /* flex-direction: column; */
+            /* flex-direction: row-reverse; */
+            flex-direction: row;
+            /* flex-direction: column-reverse; */
+
+            justify-content: center;
+            /* justify-content: left; */
+            /* justify-content: right; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+
+            align-items: center;
+
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+
+            gap:1rem;
+
+            /* align-content: space-evenly; */
+
+        }
+
+        @media (max-width:1500px) {
+
+            #Container{
+                flex-direction: column;
+                width: fit-content;
+                height: 100vh;
+                justify-self: lefts;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="Container">
+        <div id="item1" class="boxes" style="background-color: blue; color:white; order:1;"><p>Blue</p></div>
+        <div id="item2" class="boxes"style="background-color: red; color:black;order:4;"><p>Red</p></div>
+        <div id="item3" class="boxes"style="background-color: Green; color:Black;order:3;"><p>Green</p></div>
+        <div id="item4" class="boxes"style="background-color: brown; color:whiteorder:2;"><p>Brown</p></div>
+        <div id="item4" class="boxes"style="background-color: black; color:white;"><p>Black</p></div>
+    </div>
+</body>
+</html>

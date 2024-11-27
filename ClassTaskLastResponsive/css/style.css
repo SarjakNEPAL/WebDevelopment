@@ -10,8 +10,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    color: #333;
+    color: #e9fff7;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+
 }
 
 nav { 
@@ -46,15 +49,111 @@ nav a img{
 
 main{
     display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+main h1{
+    font-size: 2rem;
+    justify-self: center;
+}
+
+#boxcontent{
+    background: linear-gradient( #28615dc7, #238b84d3),url(../res/stetiscope.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width:fit-content;
+    height:60vh;
+    justify-self: center;
+    display: flex;
     align-items: center;
+    margin-top: 5rem;
+    border-radius: 5rem;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2rem;
+    justify-content: space-between;
+}
+
+#boxcontent img{
+    height: 50vh;
+    border:solid  #18bab0 0.5rem;
+    border-radius: 6rem;
+    margin: 1rem;
+
+}
+
+#header img{
+    width: 5rem;
+}
+
+footer{
+    background-color: #18bab0; 
+    color: rgb(255, 255, 255); 
     justify-content: space-around;
     text-align: center;
-    background: linear-gradient( #28615d72, #238b845b),url(../res/stetiscope.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width:50%;
-    justify-self: center;
-    margin: 4rem;
-    border-radius: 24px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.header-content h1,p,a{
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-around;
+    margin:0.5rem;
+}
+
+.button{
+    width:200px;
+
+    text-align: center;
+    margin: 20px 10px;
+
+    font-weight: bold;
+
+    background-color:  #325a56;
+    color:white;
+    cursor:pointer;
+    border-width: 100%;
+}
+
+#login{
+    background: linear-gradient( #28615dc7, #238b84d3);
+    width:fit-content;
+    height: fit-content;
     padding: 1rem;
+    justify-self: center;;
+    margin-top: 5rem;
+    border-radius: 1rem;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input{
+    border: 2px solid #51dacc;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 20rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+form label{
+    font: 2rem;
+    margin: 0.5rem;
+}
+#login img{
+    width: 12rem;
+    border: solid #51dacc 0.5rem;
+    border-radius: 14px;
 }

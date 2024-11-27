@@ -17,7 +17,7 @@ body {
 
 }
 
-nav { 
+nav ,#subnav{ 
     background-color: #18bab0; 
     color: rgb(255, 255, 255); 
     display: flex;
@@ -55,7 +55,7 @@ main{
 
 
 main h1{
-    font-size: 2rem;
+    font-size: 1.5rem;
     justify-self: center;
 }
 
@@ -86,6 +86,7 @@ main h1{
     border:solid  #18bab0 0.5rem;
     border-radius: 6rem;
     margin: 1rem;
+    flex-shrink: 2;
 
 }
 
@@ -111,10 +112,10 @@ footer{
 }
 
 .button{
-    width:200px;
+    width:8rem;
 
     text-align: center;
-    margin: 20px 10px;
+    margin: 1rem;
 
     font-weight: bold;
 
@@ -141,7 +142,7 @@ input{
     border: 2px solid #51dacc;
     border-radius: 1rem;
     padding: 1rem;
-    width: 20rem;
+    width: 80%;
 }
 form{
     display: flex;
@@ -156,4 +157,74 @@ form label{
     width: 12rem;
     border: solid #51dacc 0.5rem;
     border-radius: 14px;
+}
+
+#register{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    background: linear-gradient( #28615dc7, #238b84d3),url(../res/stetiscope.jpg);
+    margin: 1rem;
+}
+#reg input{
+    padding: 0.5rem;
+}
+
+#reg label{
+    margin: 0;
+}
+
+#reg{
+    margin: 1rem;
+    justify-content: center;
+}
+#subnav{
+    background-color: #325a56;
+    display: none;
+    font-weight: light;
+    
+    justify-content: space-around;
+}
+#subnav a{
+    text-decoration: none;
+    color:rgb(252, 250, 247);
+}
+
+@media (max-width:1360px) {
+
+    #boxcontent img, #login img, #info{
+display: none;
+    }
+    #boxcontent{
+        background: linear-gradient( #28615db0, #238b84d3),url(../res/doctor3.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+@media (max-width:700px) {
+
+    nav #trans{
+        display: none;
+    }
+
+    #subnav{
+        display: flex;
+    }
+
+    .button{
+        width:fit-content;
+        margin: 0.5rem;
+        border-width: 50%;
+        padding: 0.5rem;
+    }
+    footer{
+        display: none;
+    }
+    #submitt{
+        flex-direction: column;
+    }
+    input{
+        padding: 0.5rem;
+    }
 }

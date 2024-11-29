@@ -20,7 +20,22 @@
             document.getElementById("output_MAD").innerText = MAD_percentage.toFixed(2) + "%";
             document.getElementById("output_PD").innerText = PD_percentage.toFixed(2) + "%";
 
-            document.getElementById('output_here').innerText=((SD_percentage+WD_percentage+MAD_percentage+PD_percentage)/4)+"%";
+
+            var totla=((SD_percentage+WD_percentage+MAD_percentage+PD_percentage)/4);
+            var result="F";
+            if(totla >40 && totla <60){
+                result="D";
+            }else if(totla >=60 && totla <70){
+                result="A";
+            }
+            else if(totla >=70 && totla <80){
+                result="B";
+            }else if(totla >=80 && totla <90){
+                result="A";
+            }else if(totla >=90 && totla <100){
+                result="A+";
+            }
+            document.getElementById('output_here').innerText=result;
             return false; // Prevent form submission
         }
     </script>
@@ -63,7 +78,7 @@
                 </tr>
                 <tr>
                     <td colspan="2" align="center"><input type="submit" value="Calculate"></td>
-                    <td>Total: </td>
+                    <td>Total Grade: </td>
                     <td><div id="output_here"></div></td>
                 </tr>
             </form>

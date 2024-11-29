@@ -20,6 +20,7 @@
             document.getElementById("output_MAD").innerText = MAD_percentage.toFixed(2) + "%";
             document.getElementById("output_PD").innerText = PD_percentage.toFixed(2) + "%";
 
+            document.getElementById('output_here').innerText=((SD_percentage+WD_percentage+MAD_percentage+PD_percentage)/4)+"%";
             return false; // Prevent form submission
         }
     </script>

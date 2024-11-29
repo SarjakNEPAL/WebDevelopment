@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Calculator</title>
+    <script>
+        function getPercentage(Total, Got) {
+            return (Got / Total) * 100;
+        }
+
+        function calculate() {
+            var SD_percentage = getPercentage(document.getElementById('OM_SD').value, document.getElementById('FM_SD').value);
+            var WD_percentage = getPercentage(document.getElementById('OM_WD').value, document.getElementById('FM_WD').value);
+            var MAD_percentage = getPercentage(document.getElementById('OM_MAD').value, document.getElementById('FM_MAD').value);
+            var PD_percentage = getPercentage(document.getElementById('OM_PD').value, document.getElementById('FM_PD').value);
+
+            document.getElementById("output_SD").innerText = SD_percentage.toFixed(2) + "%";
+            document.getElementById("output_WD").innerText = WD_percentage.toFixed(2) + "%";
+            document.getElementById("output_MAD").innerText = MAD_percentage.toFixed(2) + "%";
+            document.getElementById("output_PD").innerText = PD_percentage.toFixed(2) + "%";
+
+            return false; // Prevent form submission
+        }
+    </script>
+</head>
+<body>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Full Marks</th>
+                <th>Obtained Marks</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <form onsubmit="return calculate()">
+                <tr>
+                    <td>Software Development</td>
+                    <td><input type="number" name="OM_SD" id="OM_SD" required></td>
+                    <td><input type="number" name="FM_SD" id="FM_SD" required></td>
+                    <td><div id="output_SD"></div></td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td><input type="number" name="OM_WD" id="OM_WD" required></td>
+                    <td><input type="number" name="FM_WD" id="FM_WD" required></td>
+                    <td><div id="output_WD"></div></td>
+                </tr>
+                <tr>
+                    <td>Mobile App Development</td>
+                    <td><input type="number" name="OM_MAD" id="OM_MAD" required></td>
+                    <td><input type="number" name="FM_MAD" id="FM_MAD" required></td>
+                    <td><div id="output_MAD"></div></td>
+                </tr>
+                <tr>
+                    <td>Programming for Developers</td>
+                    <td><input type="number" name="OM_PD" id="OM_PD" required></td>
+                    <td><input type="number" name="FM_PD" id="FM_PD" required></td>
+                    <td><div id="output_PD"></div></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Calculate"></td>
+                    <td>Total: </td>
+                    <td><div id="output_here"></div></td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+   
+</body>
+</html>

@@ -5,39 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marks Calculator</title>
     <script>
+        function validate(){
+            var isSD=false;
+            var isMD=false;
+            var isPD=false;
+            var isWD=false;
+
+            if(document.getElementById('OM_SD').value< document.getElementById('FM_SD').value){
+                document.getElementById('Error').innerText="Software Development's Obtain Marks Exceeds Full Marks";
+                isSD=true;
+            }else if(document.getElementById('OM_WD').value< document.getElementById('FM_WD').value){
+                document.getElementById('Error').innerText="Web Development's Obtain Marks Exceeds Full Marks";
+                isWD=true;
+            }
+            else if(document.getElementById('OM_MAD').value< document.getElementById('FM_MAD').value){
+                document.getElementById('Error').innerText="Mobile App Development's Obtain Marks Exceeds Full Marks";
+                isMD=true;
+            }
+            else if(document.getElementById('OM_PD').value< document.getElementById('FM_PD').value){
+                document.getElementById('Error').innerText="Programming For Developer's Obtain Marks Exceeds Full Marks";
+                isPD=true;
+            }
+                
+            if(isMD&&isPD&&isSD&&isWD){
+                return false;
+            }else{
+                calculate();
+            }
+        };
+
         function getPercentage(Total, Got) {
             return (Got / Total) * 100;
         }
 
         function calculate() {
-            var SD_percentage = getPercentage(document.getElementById('OM_SD').value, document.getElementById('FM_SD').value);
-            var WD_percentage = getPercentage(document.getElementById('OM_WD').value, document.getElementById('FM_WD').value);
-            var MAD_percentage = getPercentage(document.getElementById('OM_MAD').value, document.getElementById('FM_MAD').value);
-            var PD_percentage = getPercentage(document.getElementById('OM_PD').value, document.getElementById('FM_PD').value);
+                var SD_percentage = getPercentage(document.getElementById('OM_SD').value, document.getElementById('FM_SD').value);
+                var WD_percentage = getPercentage(document.getElementById('OM_WD').value, document.getElementById('FM_WD').value);
+                var MAD_percentage = getPercentage(document.getElementById('OM_MAD').value, document.getElementById('FM_MAD').value);
+                var PD_percentage = getPercentage(document.getElementById('OM_PD').value, document.getElementById('FM_PD').value);
 
-            document.getElementById("output_SD").innerText = SD_percentage.toFixed(2) + "%";
-            document.getElementById("output_WD").innerText = WD_percentage.toFixed(2) + "%";
-            document.getElementById("output_MAD").innerText = MAD_percentage.toFixed(2) + "%";
-            document.getElementById("output_PD").innerText = PD_percentage.toFixed(2) + "%";
+                document.getElementById("output_SD").innerText = SD_percentage.toFixed(2) + "%";
+                document.getElementById("output_WD").innerText = WD_percentage.toFixed(2) + "%";
+                document.getElementById("output_MAD").innerText = MAD_percentage.toFixed(2) + "%";
+                document.getElementById("output_PD").innerText = PD_percentage.toFixed(2) + "%";
 
 
-            var totla=((SD_percentage+WD_percentage+MAD_percentage+PD_percentage)/4);
-            var result="F";
-            if(totla >40 && totla <60){
-                result="D";
-            }else if(totla >=60 && totla <70){
-                result="A";
+                var totla=((SD_percentage+WD_percentage+MAD_percentage+PD_percentage)/4);
+                var result="F";
+                if(totla >40 && totla <60){
+                    result="D";
+                }else if(totla >=60 && totla <70){
+                    result="A";
+                }
+                else if(totla >=70 && totla <80){
+                    result="B";
+                }else if(totla >=80 && totla <90){
+                    result="A";
+                }else if(totla >=90 && totla <100){
+                    result="A+";
+                }
+                document.getElementById('output_here').innerText=result;
+                return false; // Prevent form submission
             }
-            else if(totla >=70 && totla <80){
-                result="B";
-            }else if(totla >=80 && totla <90){
-                result="A";
-            }else if(totla >=90 && totla <100){
-                result="A+";
-            }
-            document.getElementById('output_here').innerText=result;
-            return false; // Prevent form submission
-        }
+            
+        
     </script>
 </head>
 <body>
@@ -51,7 +82,7 @@
             </tr>
         </thead>
         <tbody>
-            <form onsubmit="return calculate()">
+            <form onsubmit="return validate()">
                 <tr>
                     <td>Software Development</td>
                     <td><input type="number" name="OM_SD" id="OM_SD" required></td>
@@ -84,6 +115,6 @@
             </form>
         </tbody>
     </table>
-   
+   <div id="Error"></div>
 </body>
 </html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        #productForm {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        #productTable {
+            border-collapse: collapse;
+            width: 80%;
+        }
+        #productTable th, #productTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #productTable th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <form id="productForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" name="productName" ><br><span id="errorName"></span><br>
+
+        <label for="itemNumber">Item Number:</label>
+        <input type="number" id="itemNumber" name="itemNumber" ><br><span id="erroritm"></span><br>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" ><br><span id="errorQuant"></span><br>
+
+        <label for="type">Type:</label>
+        <select id="type" name="type" >
+            <option value="food">Food</option>
+            <option value="clothes">Clothes</option>
+            <option value="misc">Misc</option>
+            <option value="tools">Tools</option>
+        </select><br><br>
+
+        <label for="isOnSale">Is On Sale:</label>
+        <select id="isOnSale" name="isOnSale" >
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select><br><br>
+
+        <label for="makeDateYear">Make Date:</label>
+        <input type="date" id="Date" ><br><span id="errorDate"></span><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Item Number</th>
+                <th>Quantity</th>
+                <th>Type</th>
+                <th>Is On Sale</th>
+                <th>Make Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dynamic rows will be added here -->
+        </tbody>
+    </table>
+
+    <script>
+        let products = [];
+
+        document.getElementById('productForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let productName = document.getElementById('productName').value;
+            let itemNumber = document.getElementById('itemNumber').value;
+            let quantity = document.getElementById('quantity').value;
+            let type = document.getElementById('type').value;
+            let isOnSale = document.getElementById('isOnSale').value;
+            let makeDate = document.getElementById('Date').value;
+
+
+
+            let product = {
+                productName: productName,
+                itemNumber: itemNumber,
+                quantity: quantity,
+                type: type,
+                isOnSale: isOnSale,
+                makeDate: makeDate
+            };
+
+            products.push(product);
+            addProductToTable(product);
+        });
+
+        function addProductToTable(product) {
+            let tableBody = document.querySelector('#productTable tbody');
+            let row = document.createElement('tr');
+
+            Object.values(product).forEach(value => {
+                let cell = document.createElement('td');
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
+
+            tableBody.appendChild(row);
+        }
+    </script>
+</body>
+</html>

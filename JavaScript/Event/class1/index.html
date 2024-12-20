@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        *{
+            font-family: sans-serif,Arial, Helvetica;
+            font-size: 16px;
+        }
+        #Input{
+            display: flex;
+            flex-direction: column;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="Input" method="post">
+        <input type="text" placeholder="Username" id="Uname" >
+        <input type="password" placeholder="Password" id="Cred">
+        <input type="email" name="email" id="Email" placeholder="Email">
+        <input type="text" name="Location" id="Locaton" placeholder="Location">
+        <input type="submit" value="Push">
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            
+            // initializations
+            let uname=document.getElementById("Uname");
+            let pass=document.getElementById("Cred");
+            let Email=document.getElementById("Email");
+            let Location=document.getElementById("Location");
+            let Form=document.getElementById("Input");
+
+            //Event Listeners
+            uname.addEventListener("change",changeName);
+            uname.addEventListener("click",(event)=>{
+                console.log(event.target.id);
+                
+            });
+            uname.addEventListener("keydown",KeyDown);
+
+            //functions
+            function changeName(ev){
+                console.log(ev);
+                console.log(ev.target.value)
+
+            }
+
+            function focusName(ev){
+                console.log(ev)
+                ev.target.style.backgroundcolor="red";
+            }
+
+            function KeyDown(event){
+                a=(event.target.value=="r" || event.target.value=="R")?("Clicked R") : ("Not Clicked R");
+                console.log(a)
+            }
+        })    
+    </script>
+</body>
+</html>

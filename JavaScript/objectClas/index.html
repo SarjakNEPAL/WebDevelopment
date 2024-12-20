@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        const formObj ={
+            name: "Rohit",
+            id:"1204"
+        }
+        // to see keys use
+        console.log (Object.keys(formObj));
+        console.log (Object.values(formObj));
+        let names=["Rabindra","Sarjak","Yudip","Monjulika"];
+        // let strNames=names.toString; 
+        let strNames=names.join(" and "); // same output as of 2 string -> Rabindra and Sarjak and Yudip
+        
+        let nums=[1,2,3]
+        let nums2=[6,8]
+        let nums3=[6,8]
+
+
+        console.log("1,0");
+       
+        var array1=["Data1","Data2","Data3"];
+        console.log(array1);
+        array1.splice(1,0,"Data4","Data5");
+        console.log(array1);
+
+        console.log("2,1")
+
+        var array1=["Data1","Data2","Data3"];
+        console.log(array1);
+        array1.splice(2,1,"Data4","Data5");  // eeuta part add garne
+        console.log(array1); 
+
+        var array1=["Data1","Data2","Data3"];
+        console.log(array1);
+        console.log(array1.slice(0,1)); // yo part nikal
+
+        var array1=["Data1","Data2","Data3"];
+        console.log(array1);
+        array1.slice(0,1)
+        console.log(array1); // array same output slice doesnt change the array
+
+        var array2=[1,2,3,3,44,1]
+        console.log(array2.indexOf(1)) //gives index lookeing from front
+        console.log(array2.lastIndexOf(1)) //gives index looking from back
+
+        array2.forEach(n=> console.log(n))
+
+
+        // ------------------------------------------- foreach
+        const account=[
+            {name:"Rohit",class:"12",roll:12},
+            {name:"Rohan",class:"12",roll:13},
+            {name:"Rojit",class:"12",roll:14},
+            {name:"Rolex",class:"12",roll:15},
+            {name:"Chompa",class:"12",roll:16}
+        ]
+        account.forEach(n =>
+            // console.log(n),  // returns all object
+            console.log(n.name)
+        );
+
+
+        let articles=[
+            {title:"PHP classes",author:"Danny Adams"},
+            {title:"Python Arrays",author:"Amy Sandres"},
+            {title:"Array in PHP",author:"Danny Adams"}
+        ]
+
+        let PHPArticles = articles.filter(a=> a.title.includes("PHP"))
+        console.log(PHPArticles)
+
+        let cities=[
+            {name:"Kathmandu", rivers:3},
+            {name:"Lalitpur", rivers:5},
+            {name:"Bhaktapur", rivers:1}
+        ]
+
+
+
+    </script>
+</body>
+</html>

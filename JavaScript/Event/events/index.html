@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <p>propagation</p>
+    <div id="parent">Parent<button id="child">ChildButton</button></div>
+    <p>Only once exec</p>
+    <button id="once">Click once ok</button>
+    <script>
+        const once=document.getElementById("once");
+        once.addEventListener("click",() =>{
+        console.log("clicked");
+    },{once:true});
+
+    const removablebtn = document.getElementById("removeevent");
+    const removablebtnEvent = document.getElementById("removeeBtnEvent");
+
+    removablebtn.addEventListener("click");
+    </script>
+
+    
+</body>
+</html>

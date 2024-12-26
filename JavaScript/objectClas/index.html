@@ -81,8 +81,32 @@
             {name:"Lalitpur", rivers:5},
             {name:"Bhaktapur", rivers:1}
         ]
+        let river = cities.filter(c=> c.rivers>3)
+        console.log(river)
 
+        let person=[
+            {name:"Ram", class:2, age:22, contact:987654321, address:"Kathmandu"},
+            {name:"Sam", class:2, age:23, contact:987654322, address:"Kathmandu"},
+            {name:"Gam", class:12, age:21, contact:987654323, address:"Lalitpur"},
+            {name:"Ham", class:12, age:32, contact:987654324, address:"Lalitpur"},
+            {name:"Damn", class:4, age:16, contact:987654325, address:"Bhaktapur"}
+        ]
+        let datas=(person.filter(a=> (a.age>20 && a.age<30)))
+        var temp=[]
+        datas.forEach(n=>
+            temp.push(n.name)
+        )
+        console.log("The students of age 20 to 30 are", temp.join(" , "))
+        console.log("before changing:",person)
+        temp=[]
+        let newAge= person.map(n=> n.age*2)
+        console.log(newAge)
 
+        person.map(n=>
+            {if(n.age>20 && n.age<30)
+                {console.log(n)}}
+        )
+        
 
     </script>
 </body>

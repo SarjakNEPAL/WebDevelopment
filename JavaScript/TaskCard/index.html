@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+        body{
+            background:url('https://th.bing.com/th/id/R.0b2b00fcbc67a20af248a42725b868c7?rik=tKatw6VOCRRNfw&pid=ImgRaw&r=0&sres=1&sresct=1') no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: absolute;
+        }
+        #container{
+            background-color: rgb(129, 119, 119);
+            color:white;
+            display:flex;
+            height:fit-content;
+            width: fit-content;
+            flex-direction: column;
+            padding: 0.2rem;
+            margin: 0.5rem;
+            flex:1;
+        }
+        #Info{
+            background-color:rgb(193, 166, 125);
+            color:rgb(6, 6, 39);
+            padding: 0.2rem;
+        }
+        #Datas{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+        }
+        #Info{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #Info #Age{
+            border:solid black 0.1rem;
+            background-color: white;
+            margin: 1rem;
+            padding: 1rem;
+            font-size: 2rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Datas"></div>
+    <script>
+        let person=[
+            {name:"Ram", class:2, age:22, contact:987654321, address:"Kathmandu"},
+            {name:"Sam", class:2, age:23, contact:987654322, address:"Kathmandu"},
+            {name:"Gam", class:12, age:21, contact:987654323, address:"Lalitpur"},
+            {name:"Ham", class:12, age:32, contact:987654324, address:"Lalitpur"},
+            {name:"Damn", class:4, age:16, contact:987654325, address:"Bhaktapur"}
+        ]
+        let rack=document.getElementById("Datas")
+        person.forEach(a=>
+            {
+                const card= document.createElement("div");
+                card.id="container";
+                card.innerHTML=`
+                            <div id="Title"><H1>Name : ${a.name} </H1></div>
+        <div id="Info">
+            <h1 id="Age">${a.age}</h1><div id="other">
+            <h1>Contact : ${a.contact}</h1>
+            <h1>Address : ${a.address}</h1>
+            </div>
+        </div>
+                `;
+                rack.appendChild(card);
+            }
+
+    )
+
+    </script>    
+
+</body>
+</html>
